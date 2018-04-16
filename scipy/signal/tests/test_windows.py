@@ -37,8 +37,6 @@ window_funcs = [
     ('tukey', (0.5,)),
     ]
 
-class
-
 class TestBartHann(object):
 
     def test_basic(self):
