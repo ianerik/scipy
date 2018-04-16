@@ -37,6 +37,7 @@ window_funcs = [
     ('tukey', (0.5,)),
     ]
 
+class
 
 class TestBartHann(object):
 
@@ -105,7 +106,6 @@ class TestBohman(object):
         assert_allclose(windows.bohman(6, False),
                         [0, 0.1089977810442293, 0.6089977810442293, 1.0,
                          0.6089977810442295, 0.1089977810442293])
-
 
 class TestBoxcar(object):
 
@@ -304,6 +304,11 @@ class TestGeneralHamming(object):
                         [0.5, 0.6727457514, 0.9522542486,
                         0.9522542486, 0.6727457514, 0.5])
 
+class TestGeneralGaussian(object):
+
+    def test_basic(self):
+        assert_allclose(windows.general_gaussian(6, 1, 1.0),
+                        windows.gaussian(6, 1.0))
 
 class TestHamming(object):
 
